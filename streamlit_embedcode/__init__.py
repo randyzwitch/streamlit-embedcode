@@ -2,6 +2,29 @@ import streamlit as st
 
 
 def _clean_link(link):
+    """Strip trailing slash if present on link.
+
+    Given a string `link`, return `link` without a trailing slash.
+
+    Parameters
+    ----------
+    link : str
+        URL from code sharing website
+
+    Returns
+    -------
+    str
+        Returns value of `link` without trailing slash.
+
+    Example
+    -------
+    >>> _clean_link("https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087/")
+    'https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087'
+
+    >>> _clean_link("https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087")
+    'https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087'
+    """
+
     return link[:-1] if link[-1] == "/" else link
 
 
@@ -66,6 +89,17 @@ def ideone_snippet(link, height=600, width=950, scrolling=True):
     snippetnumber = _clean_link(link).split("/")[-1]
     return st.html(
         f"""<script src="https://ideone.com/e.js/{snippetnumber}" type="text/javascript" ></script>""",
+        height=height,
+        width=width,
+        scrolling=scrolling,
+    )
+
+
+def tagmycode_snippet(link, height=600, width=950, scrolling=True):
+
+    snippetnumber = _clean_link(link).split("/")[-2]
+    return st.html(
+        f"""<script src="https://tagmycode.com/embed/js/{snippetnumber}"></script>""",
         height=height,
         width=width,
         scrolling=scrolling,
