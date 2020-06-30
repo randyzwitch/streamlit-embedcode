@@ -113,6 +113,28 @@ def pastebin_snippet(link, height=600, width=950, scrolling=True):
 def codepen_snippet(
     link, height=600, width=950, scrolling=True, theme="light", preview=True
 ):
+    """Embed a CodePen snippet.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://codepen.io/
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    theme: str
+        Color theme of snippet (i.e. "light", "dark")
+    preview: bool
+        Require snippet to be clicked to load. Setting `preview=True` can improve load times.
+
+    
+    Example
+    -------
+    >>> pastebin_snippet("https://pastebin.com/AWYbziQF", width = 600, scrolling = False)
+    """
 
     user, _, slughash = _clean_link(link).split("/")[-3:]
     return st.html(
