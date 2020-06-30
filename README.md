@@ -3,7 +3,7 @@
 streamlit-embedcode is the easiest way to embed code snippets into your Streamlit app! This component supports the following code sharing services:
 
 - [GitHub gist](https://gist.github.com/)
-- [Gitlab snippets](https://gitlab.com/explore/snippets)
+- [GitLab snippets](https://gitlab.com/explore/snippets)
 - [Pastebin](https://pastebin.com/)
 - [CodePen](https://codepen.io/)
 - [Ideone](https://ideone.com/)
