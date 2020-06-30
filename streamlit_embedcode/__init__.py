@@ -83,6 +83,23 @@ def gitlab_snippet(link, height=600, width=950, scrolling=True):
 
 
 def pastebin_snippet(link, height=600, width=950, scrolling=True):
+    """Embed a Pastebin snippet.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://pastebin.com/
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    
+    Example
+    -------
+    >>> pastebin_snippet("https://pastebin.com/AWYbziQF", width = 600, scrolling = False)
+    """
 
     snippetnumber = _clean_link(link).split("/")[-1]
     return st.html(
