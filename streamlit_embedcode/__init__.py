@@ -134,6 +134,23 @@ def codepen_snippet(
 
 
 def ideone_snippet(link, height=600, width=950, scrolling=True):
+    """Embed a Ideone snippet.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://ideone.com/
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    
+    Example
+    -------
+    >>> ideone_snippet("https://ideone.com/vQ54cr")
+    """
 
     snippetnumber = _clean_link(link).split("/")[-1]
     return st.html(
@@ -145,6 +162,23 @@ def ideone_snippet(link, height=600, width=950, scrolling=True):
 
 
 def tagmycode_snippet(link, height=600, width=950, scrolling=True):
+    """Embed a TagMyCode snippet.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://tagmycode.com/
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    
+    Example
+    -------
+    >>> tagmycode_snippet("https://tagmycode.com/snippet/14040/css-structure#.XvYhunVKglU")
+    """
 
     snippetnumber = _clean_link(link).split("/")[-2]
     return st.html(
