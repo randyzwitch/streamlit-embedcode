@@ -27,7 +27,7 @@ def _clean_link(link):
 
 
 def github_gist(link, height=600, width=950, scrolling=True):
-    """Embed a GitHub Gist.
+    """Embed a GitHub gist.
 
     Parameters
     ----------
@@ -55,6 +55,23 @@ def github_gist(link, height=600, width=950, scrolling=True):
 
 
 def gitlab_snippet(link, height=600, width=950, scrolling=True):
+    """Embed a Gitlab snippet.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://gitlab.com/explore/snippets
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    
+    Example
+    -------
+    >>> gitlab_snippet("https://gitlab.com/snippets/1990429/", height = 400)
+    """
 
     snippetnumber = _clean_link(link).split("/")[-1]
     return st.html(
