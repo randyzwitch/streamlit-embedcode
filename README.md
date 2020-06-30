@@ -29,3 +29,5 @@ github_gist("https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e508
 ```
 
 Optionally, you can provide arguments for `height`, `width` and `scrolling` to control the behavior of the iframe the content is displayed in.
+
+![github_streamlit_embed](https://github.com/randyzwitch/streamlit-embedcode/blob/master/_static/gh_gist_example.png)
