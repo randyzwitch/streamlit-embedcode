@@ -4,8 +4,6 @@ import streamlit as st
 def _clean_link(link):
     """Strip trailing slash if present on link.
 
-    Given a string `link`, return `link` without a trailing slash.
-
     Parameters
     ----------
     link : str
@@ -29,6 +27,23 @@ def _clean_link(link):
 
 
 def github_gist(link, height=600, width=950, scrolling=True):
+    """Embed a GitHub Gist.
+
+    Parameters
+    ----------
+    link : str
+        URL from https://gist.github.com/
+    height: int
+        Height of the resulting iframe
+    width: int
+        Width of the resulting iframe
+    scrolling: bool
+        If content is larger than iframe size, provide scrollbars?
+    
+    Example
+    -------
+    >>> github_gist("https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087/")
+    """
 
     gistcreator, gistid = _clean_link(link).split("/")[-2:]
     return st.html(
