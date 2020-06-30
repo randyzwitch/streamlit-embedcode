@@ -209,3 +209,9 @@ def tagmycode_snippet(link, height=600, width=950, scrolling=True):
         width=width,
         scrolling=scrolling,
     )
+
+
+github_gist(
+    "https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087/", height=800
+)
+
