@@ -1,5 +1,5 @@
 import streamlit as st
-import streamlit_embedcode as ste
+from streamlit_embedcode import *
 
 # CSS
 st.markdown(
@@ -42,6 +42,14 @@ footer {
 
 header .decoration {
     background-image: none;
+}
+
+:root {
+    --breakpoint-xs: 1200px;
+    --breakpoint-sm: 1200px;
+    --breakpoint-md: 1200px;
+    --breakpoint-lg: 1200px;
+    --breakpoint-xl: 1200px;
 }
 
 </style>
@@ -92,19 +100,31 @@ if choice == "Home":
     """
 
 elif choice == "github_gist()":
-    """### github_gist()"""
+    """## github_gist()"""
+
+    github_gist
 
 elif choice == "gitlab_snippet()":
-    """### gitlab_snippet()"""
+    """## gitlab_snippet()"""
+
+    gitlab_snippet
 
 elif choice == "pastebin_snippet()":
-    """### pastebin_snippet()"""
+    """## pastebin_snippet()"""
+
+    pastebin_snippet
 
 elif choice == "codepen_snippet()":
-    """### codepen_snippet()"""
+    """## codepen_snippet()"""
+
+    codepen_snippet
 
 elif choice == "ideone_snippet()":
-    """### ideone_snippet()"""
+    """## ideone_snippet()"""
+
+    ideone_snippet
 
 elif choice == "tagmycode_snippet()":
-    """### tagmycode_snippet()"""
+    """## tagmycode_snippet()"""
+
+    tagmycode_snippet
