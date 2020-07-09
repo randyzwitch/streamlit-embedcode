@@ -28,3 +28,4 @@ src/frontend/node_modules/
 .vscode
 node_modules/
 *.egg-info
+__pycache__

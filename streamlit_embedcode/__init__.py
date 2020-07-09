@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 
 
 def _clean_link(link):
@@ -46,7 +47,7 @@ def github_gist(link, height=600, width=950, scrolling=True):
     """
 
     gistcreator, gistid = _clean_link(link).split("/")[-2:]
-    return st.html(
+    return components.html(
         f"""<script src="https://gist.github.com/{gistcreator}/{gistid}.js"></script>""",
         height=height,
         width=width,
@@ -74,7 +75,7 @@ def gitlab_snippet(link, height=600, width=950, scrolling=True):
     """
 
     snippetnumber = _clean_link(link).split("/")[-1]
-    return st.html(
+    return components.html(
         f"""<script src='https://gitlab.com/snippets/{snippetnumber}.js'></script>""",
         height=height,
         width=width,
@@ -102,7 +103,7 @@ def pastebin_snippet(link, height=600, width=950, scrolling=True):
     """
 
     snippetnumber = _clean_link(link).split("/")[-1]
-    return st.html(
+    return components.html(
         f"""<script src="https://pastebin.com/embed_js/{snippetnumber}"></script>""",
         height=height,
         width=width,
@@ -137,7 +138,7 @@ def codepen_snippet(
     """
 
     user, _, slughash = _clean_link(link).split("/")[-3:]
-    return st.html(
+    return components.html(
         f"""
         <p class="codepen" 
         data-height="{height}" 
@@ -175,7 +176,7 @@ def ideone_snippet(link, height=600, width=950, scrolling=True):
     """
 
     snippetnumber = _clean_link(link).split("/")[-1]
-    return st.html(
+    return components.html(
         f"""<script src="https://ideone.com/e.js/{snippetnumber}" type="text/javascript" ></script>""",
         height=height,
         width=width,
@@ -203,7 +204,7 @@ def tagmycode_snippet(link, height=600, width=950, scrolling=True):
     """
 
     snippetnumber = _clean_link(link).split("/")[-2]
-    return st.html(
+    return components.html(
         f"""<script src="https://tagmycode.com/embed/js/{snippetnumber}"></script>""",
         height=height,
         width=width,
