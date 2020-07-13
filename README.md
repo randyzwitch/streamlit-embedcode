@@ -11,7 +11,7 @@ streamlit-embedcode is the easiest way to embed code snippets into your Streamli
 
 ## Installation
 
-streamlit-embedcode is distributed via PyPI:
+streamlit-embedcode is distributed via [PyPI](https://pypi.org/project/streamlit-embedcode/):
 
 ```python
 pip install streamlit-embedcode
