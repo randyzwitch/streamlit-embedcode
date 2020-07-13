@@ -43,7 +43,7 @@ def github_gist(link, height=600, width=950, scrolling=True):
     
     Example
     -------
-    >>> github_gist("https://gist.github.com/randyzwitch/be8c5e9fb5b8e7b046afebcac12e5087/")
+    >>> github_gist("https://gist.github.com/randyzwitch/934d502e53f2adcb48eea2423fe4a47e")
     """
 
     gistcreator, gistid = _clean_link(link).split("/")[-2:]
@@ -71,7 +71,7 @@ def gitlab_snippet(link, height=600, width=950, scrolling=True):
     
     Example
     -------
-    >>> gitlab_snippet("https://gitlab.com/snippets/1990429/", height = 400)
+    >>> gitlab_snippet("https://gitlab.com/snippets/1995463", height = 400)
     """
 
     snippetnumber = _clean_link(link).split("/")[-1]
@@ -134,7 +134,7 @@ def codepen_snippet(
     
     Example
     -------
-    >>> pastebin_snippet("https://pastebin.com/AWYbziQF", width = 600, scrolling = False)
+    >>> codepen_snippet("https://codepen.io/ste-vg/pen/GRooLza", width = 600, scrolling = False)
     """
 
     user, _, slughash = _clean_link(link).split("/")[-3:]
@@ -200,7 +200,7 @@ def tagmycode_snippet(link, height=600, width=950, scrolling=True):
     
     Example
     -------
-    >>> tagmycode_snippet("https://tagmycode.com/snippet/14040/css-structure#.XvYhunVKglU")
+    >>> tagmycode_snippet("https://tagmycode.com/snippet/5965/recursive-list-files-in-a-dir#.Xwyc43VKglU")
     """
 
     snippetnumber = _clean_link(link).split("/")[-2]
