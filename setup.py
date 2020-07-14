@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="streamlit-embedcode",
-    version="0.0.2",
+    version="0.1.0",
     author="Randy Zwitch",
     author_email="randy@streamlit.io",
     description="Streamlit component for embedded code snippets",
@@ -13,5 +13,5 @@ setuptools.setup(
     include_package_data=True,
     classifiers=[],
     python_requires=">=3.6",
-    install_requires=["streamlit >= 0.62"],
+    install_requires=["streamlit >= 0.63"],
 )
