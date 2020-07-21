@@ -23,7 +23,6 @@ def test_cleanlink_trailing():
 # set up Selenium
 # https://www.lambdatest.com/blog/test-automation-using-pytest-and-selenium-webdriver/
 import pytest
-import time
 import subprocess
 from selenium import webdriver
 from chromedriver_py import binary_path
@@ -48,6 +47,4 @@ class Test_URL(BasicTest):
     def test_open_url(self):
         self.driver.get("https://www.lambdatest.com/")
         print(self.driver.title)
-
-        time.sleep(5)
 
