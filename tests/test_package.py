@@ -1,4 +1,3 @@
-import selenium
 from streamlit_embedcode import _clean_link
 
 
@@ -20,31 +19,47 @@ def test_cleanlink_trailing():
     )
 
 
-# set up Selenium
-# https://www.lambdatest.com/blog/test-automation-using-pytest-and-selenium-webdriver/
-import pytest
-import subprocess
-from selenium import webdriver
-from chromedriver_py import binary_path
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.keys import Keys
+# # set up Selenium
+# # https://www.lambdatest.com/blog/test-automation-using-pytest-and-selenium-webdriver/
+# import pytest
+# import subprocess
+# from selenium import webdriver
+# from chromedriver_py import binary_path
+# from selenium.webdriver.chrome.options import Options
+# from selenium.webdriver.common.keys import Keys
 
-# Fixture for Chrome
-@pytest.fixture(scope="class")
-def chrome_driver_init(request):
-    chrome_driver = webdriver.Chrome(executable_path=binary_path)
-    request.cls.driver = chrome_driver
-    yield
-    chrome_driver.close()
-
-
-@pytest.mark.usefixtures("chrome_driver_init")
-class BasicTest:
-    pass
+# # Fixture for Chrome
+# @pytest.fixture(scope="class")
+# def chrome_driver_init(request):
+#     chrome_driver = webdriver.Chrome(executable_path=binary_path)
+#     request.cls.driver = chrome_driver
+#     yield
+#     chrome_driver.close()
 
 
-class Test_URL(BasicTest):
-    def test_open_url(self):
-        self.driver.get("http://testHost")
-        print(self.driver.title)
+# @pytest.mark.usefixtures("chrome_driver_init")
+# class BasicTest:
+#     pass
 
+
+# class Test_URL(BasicTest):
+#     def test_open_url(self):
+#         self.driver.get("http://testHost")
+#         print(self.driver.title)
+
+from seleniumbase import BaseCase
+
+
+class MyTestClass(BaseCase):
+    def test_basic(self):
+        self.open("https://store.xkcd.com/search")
+        self.type('input[name="q"]', "xkcd book\n")
+        self.assert_text("xkcd: volume 0", "h3")
+        self.open("https://xkcd.com/353/")
+        self.assert_title("xkcd: Python")
+        self.assert_element('img[alt="Python"]')
+        self.click('a[rel="license"]')
+        self.assert_text("free to copy and reuse")
+        self.go_back()
+        self.click_link_text("About")
+        self.assert_exact_text("xkcd.com", "h2")
