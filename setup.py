@@ -14,5 +14,4 @@ setuptools.setup(
     classifiers=[],
     python_requires=">=3.6",
     install_requires=["streamlit >= 0.63"],
-    tests_require=["pytest>=5.4", "selenium>=3.1"],
 )
