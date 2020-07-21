@@ -45,6 +45,6 @@ class BasicTest:
 
 class Test_URL(BasicTest):
     def test_open_url(self):
-        self.driver.get("https://www.lambdatest.com/")
+        self.driver.get("http://testHost")
         print(self.driver.title)
 
