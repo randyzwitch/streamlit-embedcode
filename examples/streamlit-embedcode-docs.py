@@ -1,6 +1,8 @@
 import streamlit as st
 from streamlit_embedcode import *
 
+st.beta_set_page_config(page_title="streamlit-embedcode documentation",)
+
 choice = st.sidebar.radio(
     "Please choose a function to see its documentation",
     (
