@@ -1,4 +1,4 @@
-# streamlit-embedcode
+# streamlit-embedcode [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/randyzwitch/streamlit-embedcode/examples/streamlit_app.py)
 
 ![Python package](https://github.com/randyzwitch/streamlit-embedcode/workflows/Python%20package/badge.svg)
 
