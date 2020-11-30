@@ -2,6 +2,8 @@
 
 ![Python package](https://github.com/randyzwitch/streamlit-embedcode/workflows/Python%20package/badge.svg)
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/randyzwitch/streamlit-embedcode/examples/streamlit_app.py)
+
 streamlit-embedcode is the easiest way to embed code snippets into your Streamlit app! This [static component](https://docs.streamlit.io/en/stable/develop_streamlit_components.html#create-a-static-component) supports the following code sharing services:
 
 - [GitHub gist](https://gist.github.com/)
